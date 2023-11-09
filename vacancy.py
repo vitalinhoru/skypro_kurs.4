@@ -1,4 +1,4 @@
-from json_maker import JsonSaver
+from json_maker import JsonMaker
 
 
 class Vacancy:
@@ -27,7 +27,7 @@ class Vacancy:
 
     @staticmethod
     def instantiate_from_json():
-        data = JsonSaver.get_vacancy()  # Берет вакансии из файла
+        data = JsonMaker.get_vacancy()  # Берет вакансии из файла
 
         for vacancy in data['vacancies']:
             Vacancy.list_vacancies.append(Vacancy(vacancy['name'], vacancy['url'], vacancy['salary'], vacancy['experience']))
@@ -68,7 +68,7 @@ class Vacancy:
         Конечный результат вывода информации о вакансиях
         """
 
-        JsonSaver.add_vacancy(all_vacancies)  # Добавляет в файл json список с вакансиями.
+        JsonMaker.add_vacancy(all_vacancies)  # Добавляет в файл json список с вакансиями.
         vacancies = Vacancy.instantiate_from_json()  # Создает список экземпляров класса из json файла
         sort_vacancies = Vacancy.sort_vacancies()  # Сортировка по З/П
         top_vacancies = Vacancy.get_top_vacancies(top=total_view, vacancies=sort_vacancies)  # Получает топ вакансий

@@ -1,7 +1,7 @@
 import json
 
 
-class JsonSaver:
+class JsonMaker:
     """
     Класс для работы с файлом *.json*
     """

@@ -1,11 +1,11 @@
-from json_maker import JsonSaver
+from json_maker import JsonMaker
 from src.hh import HeadHunterAPI
 from src.sj import SuperJobAPI
 from vacancy import Vacancy
 
 
 def main():
-    JsonSaver.remove_file()  # Очистка файла с вакансиями перед поиском
+    JsonMaker.remove_file()  # Очистка файла с вакансиями перед поиском
     vacancy = input('ПОИСК ВАКАНСИЙ\n'
                     'Введите поисковый запрос, например "Python":\n'
                     '>>> ')
