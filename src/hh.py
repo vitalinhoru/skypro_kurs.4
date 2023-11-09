@@ -1,5 +1,5 @@
 import requests
-from Abstract import GetAPI
+from abs import GetAPI
 
 
 class HeadHunterAPI(GetAPI):
