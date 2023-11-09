@@ -1,6 +1,6 @@
 import os
 import requests
-from abs import GetAPI
+from src.abs import GetAPI
 
 
 class SuperJobAPI(GetAPI):

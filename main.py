@@ -1,4 +1,4 @@
-from json import JsonSaver
+from json_maker import JsonSaver
 from src.hh import HeadHunterAPI
 from src.sj import SuperJobAPI
 from vacancy import Vacancy

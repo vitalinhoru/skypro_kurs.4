@@ -1,4 +1,4 @@
-from json import JsonSaver
+from json_maker import JsonSaver
 
 
 class Vacancy:
